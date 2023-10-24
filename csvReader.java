@@ -1,9 +1,14 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class MyScanner 
+
+public class csvReader 
 {
-    public void run() {
-        Scanner scanner = new Scanner(System.in);
+    public void run() throws FileNotFoundException{
+        File doc = new File();
+        Scanner scanner = new Scanner(doc);
+        
         while (true){
             if(scanner.hasNext()){
                 String str = scanner.next();
@@ -12,8 +17,7 @@ public class MyScanner
         }
     }
     public static void main(String[] args) {
-        MyScanner changema1n = new MyScanner();
-        changema1n.run();
+        
     }
 }
 
