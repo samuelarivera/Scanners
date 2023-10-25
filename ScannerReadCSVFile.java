@@ -24,6 +24,14 @@ public class ScannerReadCSVFile
             // Read the next line of the file
             String line = scanner.nextLine();
             System.out.println(line);
+            Scanner AVGER = new Scanner(line);
+            AVGER.useDelimiter(",");
+              int i = AVGER.nextInt() - AVGER.Int();  
+            while(AVGER.hasNext()){
+                i =  i + AVGER.nextInt(1);
+            }
+            
+            
 
             // line now contains a line of comma-separated numbers
             // representing 10 test scores for each class.
