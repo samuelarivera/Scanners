@@ -23,16 +23,18 @@ public class ScannerReadCSVFile
         while (scanner.hasNext()) {
             // Read the next line of the file String line = scanner.nextLine;
            String line = scanner.nextLine();
+           String roomnum = line.substring(0, line.indexOf(","));
             Scanner AVGER = new Scanner(line);
-            AVGER.useDelimiter(",");
-            int i = AVGER.nextInt();  
+            AVGER.useDelimiter(","); 
             int total = 0;
             while(AVGER.hasNext()){
-                total =  total + AVGER.nextInt();
+                int token = AVGER.nextInt();
+                total = total + token;
             }
+            total = total - Integer.parseInt(roomnum);
             total = total / 10;
-            System.out.print(i & total);
-
+            System.out.println(roomnum + total);
+            
             // line now contains a line of comma-separated numbers
             // representing 10 test scores for each class.
             //
